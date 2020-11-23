@@ -1,3 +1,3 @@
-# Liquid
+# 液體
 
-This is a Slimefun addon that adds liquid versions af metals and alloys and ways to process and store them.
+這是一個Slimefun附加, 添加了金屬與合金的液體版本以及處理儲存的方式.

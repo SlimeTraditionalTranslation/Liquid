@@ -1,6 +1,7 @@
 name: Liquid
 author: Seggan
 main: io.github.seggan.liquid.Liquid
+description: 黏液科技附加 液體 繁體翻譯版.
 depend: [Slimefun]
 version: ${project.version}
 api-version: 1.14
