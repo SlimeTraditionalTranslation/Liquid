@@ -1,5 +1,6 @@
 package io.github.seggan.liquid;
 
+import io.github.seggan.liquid.categories.MixerCategory;
 import io.github.seggan.liquid.machinery.Centrifuge;
 import io.github.seggan.liquid.machinery.Crystallizer;
 import io.github.seggan.liquid.machinery.Melter;
@@ -48,7 +49,7 @@ public class Liquid extends JavaPlugin implements SlimefunAddon {
                     .replace(" 錠", "")
             );
             LiquidMetal.addLiquid(metal, stack);
-            metals.add(new LiquidMetal(stack));
+            metals.add(new LiquidMetal(stack, metal));
         }
 
         for (ItemStack crystal : LiquidMetal.getCrystals()) {
@@ -58,7 +59,7 @@ public class Liquid extends JavaPlugin implements SlimefunAddon {
                 "&6融化 " + ChatUtils.removeColorCodes(ItemUtils.getItemName(crystal))
             );
             LiquidMetal.addCrystal(crystal, stack);
-            metals.add(new LiquidMetal(stack));
+            metals.add(new LiquidMetal(stack, crystal));
         }
 
         for (ItemStack ore : LiquidMetal.getOres()) {
@@ -68,7 +69,7 @@ public class Liquid extends JavaPlugin implements SlimefunAddon {
                 "&6融化 " + ChatUtils.removeColorCodes(ItemUtils.getItemName(ore))
             );
             LiquidMetal.addOre(ore, stack);
-            metals.add(new LiquidMetal(stack));
+            metals.add(new LiquidMetal(stack, ore));
         }
 
         new Melter(Items.category, Items.MELTER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
@@ -119,6 +120,8 @@ public class Liquid extends JavaPlugin implements SlimefunAddon {
         }
 
         RecipeType.GRIND_STONE.register(new ItemStack[]{Items.SLAG}, SlimefunItems.SIFTED_ORE);
+
+        MixerCategory.INSTANCE.register();
     }
 
     @Override

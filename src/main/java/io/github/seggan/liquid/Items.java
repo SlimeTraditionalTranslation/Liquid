@@ -86,7 +86,7 @@ public final class Items {
     public static final SlimefunItemStack SLAG = new SlimefunItemStack(
         "SLAG",
         Material.CHARCOAL,
-        "&0礦渣",
+        "&7礦渣",
         "",
         "&7某人無用之物",
         "&7可以是他人的寶藏..."
