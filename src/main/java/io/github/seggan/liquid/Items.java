@@ -83,6 +83,19 @@ public final class Items {
         LoreBuilder.powerBuffer(16)
     );
 
+    public static final SlimefunItemStack SPRAY_SOLIDIFIER = new SlimefunItemStack(
+        "SPRAY_SOLIDIFIER",
+        Material.SMITHING_TABLE,
+        "&b噴霧固化機",
+        "",
+        "&7此將固化機將液體噴出,",
+        "&7讓液體變成粉形式.",
+        "&7由於工作速度比常規的固化機還快,",
+        "&7因此消耗的電力也更多.",
+        LoreBuilder.powerPerSecond(64),
+        LoreBuilder.powerBuffer(128)
+    );
+
     public static final SlimefunItemStack SLAG = new SlimefunItemStack(
         "SLAG",
         Material.CHARCOAL,
